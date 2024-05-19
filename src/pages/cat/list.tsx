@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Header from "src/components/Header";
 import Filter from "src/components/Filter";
 import CatListComponent from "src/components/cat/List";
@@ -8,7 +6,7 @@ export default function CatList() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="my-8 ">
+      <div className="my-8">
         <div className="flex flex-col">
           <div className="container mx-auto">
             <h2 className="text-xl font-bold px-4 mb-4">Browse Cats</h2>
