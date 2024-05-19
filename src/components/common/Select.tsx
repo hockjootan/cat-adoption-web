@@ -5,14 +5,14 @@ import ReactSelect, {
 } from "react-select";
 
 // Define the type for your option
-interface OptionType {
+export interface OptionType {
   value: string;
   label: string;
 }
 
 // Define the props for your custom select component
 interface SelectProps
-  extends ReactSelectProps<OptionType, false, GroupBase<OptionType>> {}
+  extends ReactSelectProps<OptionType, boolean, GroupBase<OptionType>> {}
 
 const Select: React.FC<SelectProps> = (props) => {
   return (

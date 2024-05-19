@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Select from "src/components/common/Select";
+import type { OptionType } from "src/components/common/Select";
 import { catAgeGroup, catGender, catBreed, catLocation } from "src/config";
 
 const Filter: React.FC = () => {
@@ -66,7 +67,7 @@ const Filter: React.FC = () => {
         <h3 className="font-medium mb-2">Breed</h3>
         <Select
           options={catBreed}
-          onChange={(option) => setBreed(option?.value || "")}
+          onChange={(option) => setBreed((option as OptionType)?.value || "")}
           value={catBreed.find((b) => b.value === breed)}
           placeholder="Select Breed"
           isClearable
@@ -76,7 +77,9 @@ const Filter: React.FC = () => {
         <h3 className="font-medium mb-2">Location</h3>
         <Select
           options={catLocation}
-          onChange={(option) => setLocation(option?.value || "")}
+          onChange={(option) =>
+            setLocation((option as OptionType)?.value || "")
+          }
           value={catLocation.find((l) => l.value === location)}
           placeholder="Select Location"
           isClearable
