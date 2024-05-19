@@ -33,13 +33,9 @@ const CatDetails: React.FC<CatDetailsProps> = ({
 
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="min-w-64 md:w-1/4  p-4">
+      <div className="min-w-64 md:w-1/4 p-4">
         <div className="bg-gray-200 aspect-square relative mb-4">
-          <Image
-            src="/assets/images/cat-example.webp"
-            alt="cat-example"
-            layout="fill"
-          />
+          <Image src="/assets/images/cat-example.webp" alt="cat-example" fill />
         </div>
         <div className="w-full bg-emerald-500 text-white p-1 font-bold text-center rounded">
           For adoption
