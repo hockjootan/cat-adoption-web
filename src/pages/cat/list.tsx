@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Header from "src/components/Header";
 import Filter from "src/components/Filter";
-import CatListComponent from "src/components/CatList";
+import CatListComponent from "src/components/cat/CatList";
 
 export default function CatList() {
   return (

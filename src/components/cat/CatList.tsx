@@ -1,5 +1,5 @@
-import CatCard from "src/components/CatCard";
-import type { CatCardProps } from "src/components/CatCard";
+import CatCard from "src/components/cat/CatCard";
+import type { CatCardProps } from "src/components/cat/CatCard";
 
 export interface CatListProps {
   data: CatCardProps[];
