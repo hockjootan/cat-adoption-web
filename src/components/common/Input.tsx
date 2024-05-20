@@ -17,7 +17,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           name={name}
           ref={ref}
           {...rest}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 border border-gray-300 rounded focus:outline-none"
         />
         {error && error && <p className="text-red-500 text-sm">{error}</p>}
       </div>
