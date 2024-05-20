@@ -48,13 +48,9 @@ const AdoptionForm: React.FC = () => {
           />
         )}
         {step === 3 && (
-          <AdoptionIntentionStep
-            formData={formData}
-            setFormData={setFormData}
-            submitForm={submitForm}
-          />
+          <AdoptionIntentionStep formData={formData} submitForm={submitForm} />
         )}
-        {step === 4 && <SubmissionStep formData={formData} />}
+        {step === 4 && <SubmissionStep />}
       </div>
     </div>
   );

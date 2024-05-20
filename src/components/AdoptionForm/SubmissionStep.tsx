@@ -1,8 +1,4 @@
-interface SubmissionStepProps {
-  formData: any;
-}
-
-const SubmissionStep: React.FC<SubmissionStepProps> = () => {
+const SubmissionStep: React.FC = () => {
   return (
     <div className="w-full">
       <h2 className="text-xl font-bold mb-4">Thank you for your submission!</h2>
