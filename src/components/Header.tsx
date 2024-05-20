@@ -19,9 +19,9 @@ const Header: React.FC = () => {
               <li key={page.title}>
                 <a
                   href={page.href}
-                  className={`block py-2 px-3 text-gray-900 ${
-                    page.href === router.pathname ? "text-blue-700" : ""
-                  } rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0`}
+                  className={`block py-2 px-3 text-teal-950 ${
+                    page.href === router.pathname ? "text-teal-800" : ""
+                  } rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-800 md:p-0`}
                 >
                   {page.title}
                 </a>

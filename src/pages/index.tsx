@@ -9,8 +9,9 @@ export default function Home() {
     <>
       <Header />
       <div className="my-16">
-        <div className="container mx-auto flex justify-between mb-16">
+        <div className="container mx-auto flex justify-center md:justify-between mb-16">
           <Image
+            className="hidden md:block"
             src="/assets/images/cat-orange.png"
             alt="cat-orange"
             width={200}
@@ -27,6 +28,7 @@ export default function Home() {
             <Button>Browse Now</Button>
           </div>
           <Image
+            className="hidden md:block"
             src="/assets/images/cat-grey.png"
             alt="cat-grey"
             width={200}
