@@ -1,7 +1,11 @@
 import { useState } from "react";
 
 import Select from "src/components/common/Select";
+import Checkbox from "src/components/common/Checkbox";
+import Button from "src/components/common/Button";
+
 import type { OptionType } from "src/components/common/Select";
+
 import { catAgeGroup, catGender, catBreed, catLocation } from "src/config";
 
 const Filter: React.FC = () => {
@@ -32,35 +36,25 @@ const Filter: React.FC = () => {
       <div className="mb-4">
         <h3 className="font-medium mb-2">Age</h3>
         {catAgeGroup.map((ageGroup) => (
-          <div key={ageGroup.value} className="flex items-center mb-2">
-            <input
-              type="checkbox"
-              id={ageGroup.value}
-              className="mr-2"
-              checked={age.includes(ageGroup.value)}
-              onChange={() => handleAgeChange(ageGroup.value)}
-            />
-            <label htmlFor={ageGroup.value} className="text-sm text-gray-700">
-              {ageGroup.label}
-            </label>
-          </div>
+          <Checkbox
+            id={ageGroup.value}
+            className="mr-2"
+            label={ageGroup.label}
+            checked={age.includes(ageGroup.value)}
+            onChange={() => handleAgeChange(ageGroup.value)}
+          />
         ))}
       </div>
       <div className="mb-4">
         <h3 className="font-medium mb-2">Gender</h3>
         {catGender.map((genderType) => (
-          <div key={genderType.value} className="flex items-center mb-2">
-            <input
-              type="checkbox"
-              id={genderType.value}
-              className="mr-2"
-              checked={gender.includes(genderType.value)}
-              onChange={() => handleGenderChange(genderType.value)}
-            />
-            <label htmlFor={genderType.value} className="text-sm text-gray-700">
-              {genderType.label}
-            </label>
-          </div>
+          <Checkbox
+            id={genderType.value}
+            className="mr-2"
+            label={genderType.label}
+            checked={gender.includes(genderType.value)}
+            onChange={() => handleGenderChange(genderType.value)}
+          />
         ))}
       </div>
       <div className="mb-4">
@@ -70,28 +64,26 @@ const Filter: React.FC = () => {
           onChange={(option) => setBreed((option as OptionType)?.value || "")}
           value={catBreed.find((b) => b.value === breed)}
           placeholder="Select Breed"
-          isClearable
         />
       </div>
       <div className="mb-4">
         <h3 className="font-medium mb-2">Location</h3>
         <Select
           options={catLocation}
-          onChange={(option) =>
-            setLocation((option as OptionType)?.value || "")
-          }
+          onChange={(option) => {
+            setLocation((option as OptionType)?.value || "");
+          }}
           value={catLocation.find((l) => l.value === location)}
           placeholder="Select Location"
-          isClearable
         />
       </div>
       <div className="flex flex-col gap-2">
-        <button className="bg-teal-300 text-teal-800 text-sm py-1.5 px-4 rounded hover:bg-teal-400">
+        <Button className="!py-1.5 text-sm" variant="secondary">
           Filter
-        </button>
-        <button className="bg-gray-300 text-gray-900 text-sm py-1.5 px-4 rounded hover:bg-gray-400">
-          Cancel
-        </button>
+        </Button>
+        <Button className="!py-1.5 text-sm" variant="tertiary">
+          Clear
+        </Button>
       </div>
     </div>
   );

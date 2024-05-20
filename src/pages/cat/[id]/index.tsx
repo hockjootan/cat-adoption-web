@@ -1,5 +1,6 @@
 import Header from "src/components/Header";
 import CatDetails from "src/components/Cat/Details";
+import Button from "src/components/common/Button";
 
 const cat = {
   name: "Cat Name",
@@ -22,11 +23,7 @@ const CatDetailsPage: React.FC = () => {
           <div className="container mx-auto">
             <CatDetails
               details={cat}
-              ctaButton={
-                <button className="w-fit px-8 py-2 shadow-md rounded-lg font-medium bg-teal-500 text-white hover:bg-teal-600">
-                  Apply for adoption
-                </button>
-              }
+              ctaButton={<Button className="w-fit">Apply for adoption</Button>}
             />
           </div>
         </div>

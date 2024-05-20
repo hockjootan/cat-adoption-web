@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "src/components/common/Button";
 
 export interface CatCardProps {
   name: string;
@@ -21,9 +22,9 @@ const CatCard: React.FC<CatCardProps> = ({ name, breed, age, gender }) => {
         </span>
         <span className="bg-gray-100 rounded-md px-2 py-1">{gender}</span>
       </div>
-      <button className="mt-auto w-full bg-teal-300 text-teal-800 py-1.5 px-4 rounded hover:bg-teal-400 text-sm font-medium">
+      <Button className="mt-auto !py-1 text-sm" variant="secondary">
         View Profile
-      </button>
+      </Button>
     </div>
   );
 };

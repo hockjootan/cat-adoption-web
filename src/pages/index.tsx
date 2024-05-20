@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Header from "src/components/Header";
 import CatList from "src/components/Cat/List";
+import Button from "src/components/common/Button";
 
 export default function Home() {
   return (
@@ -23,9 +24,7 @@ export default function Home() {
               Join our mission to provide loving homes for cats in need.
               <br /> Start your adoption journey today!
             </p>
-            <button className="px-4 py-2 rounded-lg font-medium bg-rose-300 hover:bg-rose-400 text-rose-800">
-              Browse Now
-            </button>
+            <Button>Browse Now</Button>
           </div>
           <Image
             src="/assets/images/cat-grey.png"
