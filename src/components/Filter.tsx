@@ -64,6 +64,7 @@ const Filter: React.FC = () => {
           onChange={(option) => setBreed((option as OptionType)?.value || "")}
           value={catBreed.find((b) => b.value === breed)}
           placeholder="Select Breed"
+          isClearable
         />
       </div>
       <div className="mb-4">
@@ -75,6 +76,7 @@ const Filter: React.FC = () => {
           }}
           value={catLocation.find((l) => l.value === location)}
           placeholder="Select Location"
+          isClearable
         />
       </div>
       <div className="flex flex-col gap-2">

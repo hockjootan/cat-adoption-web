@@ -23,9 +23,9 @@ const Select: React.FC<SelectProps> = (props) => {
         valueContainer: () => "text-sm",
       }}
       components={{
-        Option: ({ children, ...rest }) => (
+        Option: ({ children, ...props }) => (
           <div
-            {...rest}
+            {...props.innerProps}
             className="text-sm px-4 py-2 cursor-pointer hover:bg-teal-100"
           >
             {children}
