@@ -1,5 +1,5 @@
 import Header from "src/components/Header";
-import CatDetails from "src/components/cat/Details";
+import CatDetails from "src/components/Cat/Details";
 
 const cat = {
   name: "Cat Name",

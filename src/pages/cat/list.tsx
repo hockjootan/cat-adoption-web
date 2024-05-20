@@ -1,6 +1,6 @@
 import Header from "src/components/Header";
 import Filter from "src/components/Filter";
-import CatListComponent from "src/components/cat/List";
+import CatListComponent from "src/components/Cat/List";
 
 export default function CatList() {
   return (

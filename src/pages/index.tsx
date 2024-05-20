@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import Header from "src/components/Header";
-import CatList from "src/components/cat/List";
+import CatList from "src/components/Cat/List";
 
 export default function Home() {
   return (

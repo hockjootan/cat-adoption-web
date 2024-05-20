@@ -3,7 +3,7 @@ import PersonalInfoStep from "src/components/AdoptionForm/PersonalInfoStep";
 import HouseholdInfoStep from "src/components/AdoptionForm/HouseholdInfoStep";
 import AdoptionIntentionStep from "src/components/AdoptionForm/AdoptionIntentionStep";
 import SubmissionStep from "src/components/AdoptionForm/SubmissionStep";
-import CatCard from "src/components/cat/Card";
+import CatCard from "src/components/Cat/Card";
 
 const AdoptionForm: React.FC = () => {
   const [formData, setFormData] = useState({
