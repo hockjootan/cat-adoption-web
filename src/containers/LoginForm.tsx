@@ -4,7 +4,7 @@ import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import Input from "src/components/common/Input";
 import Button from "src/components/common/Button";
 
-const AdoptionForm: React.FC = () => {
+const LoginForm: React.FC = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -25,7 +25,7 @@ const AdoptionForm: React.FC = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="bg-white w-1/2 min-w-[400px] max-w-[600px] shadow rounded flex flex-col p-8 items-center">
         <h1 className="text-xl font-bold mb-4">Welcome to FurEverHome</h1>
-        <p className="mb-4">Sign up to find your purr-fect companion.</p>
+        <p className="mb-4">Where you find your purr-fect companion.</p>
         <div className="w-full">
           <Controller
             name="email"
@@ -69,4 +69,4 @@ const AdoptionForm: React.FC = () => {
   );
 };
 
-export default AdoptionForm;
+export default LoginForm;
